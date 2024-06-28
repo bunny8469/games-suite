@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter";
+    color: whitesmoke;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    background-image: url(images/back2.png);
+    background-size: cover;
+    background-position: center center;
+    backdrop-filter: brightness(80%);
+}
+
+main{
+    height: 100%;
+    width: 50%;
+    min-width: 500px;
+    background-color: #111;
+    padding:2.5%;
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+    overflow: auto;
+}
+.head{
+    font-weight: 800;
+    font-size: 200%;
+    display: block;
+    margin-top:10%;
+}
+.sub-head{
+    font-weight: 400;
+    font-style: italic;
+    font-size: 90%;
+    color:#ddd;
+}
+
+.games-container{
+    margin-top:5%;
+    margin-bottom:10%;
+}
+
+.game{
+    width:100%;
+    height: 180px;
+    margin-bottom: 2.5%;
+    background-color: transparent;
+    border:1px solid #333;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+main::-webkit-scrollbar {
+    display: none;
+}
+  
+.game-image{
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+.game-details{
+    padding-left:20px;
+    padding-top:20px;
+}
+.game-head{
+    font-weight: 700;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width:calc(90% - 20px);
+}
+.game-tags{
+    margin-top:10px;
+    display: inline-flex;
+}
+.game-tag{
+    font-size:55%;
+    margin-right: 5%;
+    background-color: #CF2A42;
+    padding:4px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+.game-desc{
+    font-size: 70%;
+    margin-top:10px;
+    margin-right:20px;
+    font-weight: 300;
+    color:#eee;
+}
+.game-link{
+    display: block;
+    color: #CF2A42;
+    font-size: 80%;
+    margin-top:7px;
+}
+
+@media screen and (min-width:650px) and (max-width:1050px) {
+    .game{
+        height: 200px;
+    }
+}
+@media screen and (max-width:650px) {
+    main {
+        width:100%;
+        min-width:0;
+        padding: 5%;
+    }
+    .game{
+        height: auto;
+        padding-bottom: 10px;
+    }
+    .game-image{
+        display: none;
+    }
+}
